@@ -143,7 +143,7 @@ end
 
 ---@param user_opts pr-diff.Opts?
 function M.setup(user_opts)
-  opts = vim.tbl_deep('extend', 'force', defaults, user_opts or {})
+  opts = vim.tbl_deep_extend('force', defaults, user_opts or {})
 
   require('diffview').setup(opts.diffview)
 
